@@ -83,7 +83,7 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 200.0
-text = "Opponent  score"
+text = "enemy  score"
 align = 1
 valign = 1
 uppercase = true
@@ -92,7 +92,6 @@ __meta__ = {
 }
 
 [node name="CountdownLabel" type="Label" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -100.0
@@ -113,6 +112,48 @@ one_shot = true
 
 [node name="ScoreSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+
+[node name="Instructions" type="Node" parent="."]
+
+[node name="W" type="Label" parent="Instructions"]
+margin_left = 1240.0
+margin_top = 252.5
+margin_right = 1280.0
+margin_bottom = 266.5
+text = "W"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="S" type="Label" parent="Instructions"]
+margin_left = 1243.5
+margin_top = 453.0
+margin_right = 1283.5
+margin_bottom = 467.0
+text = "S"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UP" type="Label" parent="Instructions"]
+margin_left = 15.5
+margin_top = 246.0
+margin_right = 70.5
+margin_bottom = 260.0
+text = "up arrow"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DOWN" type="Label" parent="Instructions"]
+margin_left = 11.5
+margin_top = 441.5
+margin_right = 84.5
+margin_bottom = 455.5
+text = "down arrow"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="body_entered" from="Left" to="." method="_on_Left_body_entered"]
 [connection signal="body_entered" from="Right" to="." method="_on_Right_body_entered"]
